@@ -65,6 +65,10 @@ public class Group12 {
 	// Note: you may change the return type of the method. 
 	// You would need to provide your own function that prints your sorted array to 
 	// a while in the exact same format that my program outputs
+    /**
+     *
+     * @author Aaron Lemmon
+     */
 	private static int[][] sort(int[][] toSort) {
         int count = toSort.length;
         long[] sortMe = new long[count];
