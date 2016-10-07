@@ -8,7 +8,7 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Group0 {
+public class Group12 {
 	private static int x1;
 	private static int y1;
 	private static int x2;
