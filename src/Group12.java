@@ -66,8 +66,25 @@ public class Group12 {
 	// You would need to provide your own function that prints your sorted array to 
 	// a while in the exact same format that my program outputs
 	private static int[][] sort(int[][] toSort) {
-		Arrays.sort(toSort, new PointComparator());
-		return toSort;
+        long[] sortMe = new long[toSort.length];
+        for (int i = 0; i < toSort.length; ++i) {
+            long xDistanceToRefPoint1 = toSort[i][0] - x1;
+            long yDistanceToRefPoint1 = toSort[i][1] - y1;
+            long xDistanceToRefPoint2 = toSort[i][0] - x2;
+            long yDistanceToRefPoint2 = toSort[i][1] - y2;
+            long distanceSquaredToRefPoint1 = xDistanceToRefPoint1 * xDistanceToRefPoint1 + yDistanceToRefPoint1 * yDistanceToRefPoint1;
+            long distanceSquaredToRefPoint2 = xDistanceToRefPoint2 * xDistanceToRefPoint2 + yDistanceToRefPoint2 * yDistanceToRefPoint2;
+            long distanceSquared = (distanceSquaredToRefPoint1 <= distanceSquaredToRefPoint2) ? distanceSquaredToRefPoint1 : distanceSquaredToRefPoint2;
+            long relativeValue = (distanceSquared << 20) + i;
+            sortMe[i] = relativeValue;
+        }
+        Arrays.sort(sortMe);
+        int[][] toReturn = new int[toSort.length][];
+        for (int i = 0; i < sortMe.length; ++i) {
+            int index = (int) (sortMe[i] & 0xFFFFF);
+            toReturn[i] = toSort[index];
+        }
+		return toReturn;
 	}
 
 	private static int[][] readInData(String inputFileName) {
