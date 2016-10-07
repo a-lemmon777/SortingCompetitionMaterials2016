@@ -66,8 +66,9 @@ public class Group12 {
 	// You would need to provide your own function that prints your sorted array to 
 	// a while in the exact same format that my program outputs
 	private static int[][] sort(int[][] toSort) {
-        long[] sortMe = new long[toSort.length];
-        for (int i = 0; i < toSort.length; ++i) {
+        int count = toSort.length;
+        long[] sortMe = new long[count];
+        for (int i = 0; i < count; ++i) {
             long xDistanceToRefPoint1 = toSort[i][0] - x1;
             long yDistanceToRefPoint1 = toSort[i][1] - y1;
             long xDistanceToRefPoint2 = toSort[i][0] - x2;
@@ -79,8 +80,8 @@ public class Group12 {
             sortMe[i] = relativeValue;
         }
         Arrays.sort(sortMe);
-        int[][] toReturn = new int[toSort.length][];
-        for (int i = 0; i < sortMe.length; ++i) {
+        int[][] toReturn = new int[count][];
+        for (int i = 0; i < count; ++i) {
             int index = (int) (sortMe[i] & 0xFFFFF);
             toReturn[i] = toSort[index];
         }
