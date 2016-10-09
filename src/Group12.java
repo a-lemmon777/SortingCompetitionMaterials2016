@@ -41,7 +41,13 @@ public class Group12 {
 
 		long start = System.currentTimeMillis();
 		
-		sorted = sort(toSort);
+//		sorted = sort(toSort);
+
+		//REMOVE THIS!!!
+        for (int i = 0; i < 10; ++i) {
+            sorted = sort(toSort);
+        }
+        //REMOVE THIS!!!
 		
 		long end = System.currentTimeMillis();
 		
@@ -83,7 +89,7 @@ public class Group12 {
             long relativeValue = (distanceSquared << 20) + i;
             sortMe[i] = relativeValue;
         }
-        Arrays.sort(sortMe);
+//        Arrays.sort(sortMe);
         int[][] toReturn = new int[count][];
         for (int i = 0; i < count; ++i) {
             int index = (int) (sortMe[i] & 0xFFFFF);
