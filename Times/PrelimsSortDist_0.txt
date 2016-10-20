@@ -1,0 +1,16 @@
+182,153,169,154,100
+142,106,177,148,141
+628,670,676,678,658
+728,756,747,740,724
+153,131,153,138,137
+140,176,211,150,125
+625,650,656,630,668
+789,779,797,787,758
+Files output.txt and DataFiles/Sorted_0.txt differ
+Files output.txt and DataFiles/Sorted_1.txt differ
+Files output.txt and DataFiles/Sorted_2.txt differ
+Files output.txt and DataFiles/Sorted_3.txt differ
+Files output.txt and DataFiles/Sorted_4.txt differ
+Files output.txt and DataFiles/Sorted_5.txt differ
+Files output.txt and DataFiles/Sorted_6.txt differ
+Files output.txt and DataFiles/Sorted_7.txt differ

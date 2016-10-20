@@ -1,0 +1,16 @@
+1027,922,1032,1101,1027
+1088,986,1034,1225,945
+2081,1987,2045,2770,2043
+2397,2446,2451,2484,3136
+959,950,964,998,1055
+1087,1009,1028,1040,875
+1812,1728,2565,1826,1819
+2369,2191,2279,2163,2989
+Files output.txt and DataFiles/Sorted_0.txt are identical
+Files output.txt and DataFiles/Sorted_1.txt are identical
+Files output.txt and DataFiles/Sorted_2.txt are identical
+Files output.txt and DataFiles/Sorted_3.txt are identical
+Files output.txt and DataFiles/Sorted_4.txt are identical
+Files output.txt and DataFiles/Sorted_5.txt are identical
+Files output.txt and DataFiles/Sorted_6.txt are identical
+Files output.txt and DataFiles/Sorted_7.txt are identical
