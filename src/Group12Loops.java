@@ -7,7 +7,7 @@ import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Group12 {
+public class Group12Loops {
 	private static int x1;
 	private static int y1;
 	private static int x2;
@@ -40,7 +40,13 @@ public class Group12 {
 
 		long start = System.currentTimeMillis();
 		
-		sorted = sort(toSort);
+//		sorted = sort(toSort);
+
+		// ToDo REMOVE THIS!!!
+        for (int i = 0; i < 10; ++i) {
+            sorted = sort(toSort);
+        }
+        //REMOVE THIS!!!
 		
 		long end = System.currentTimeMillis();
 		
@@ -79,7 +85,7 @@ public class Group12 {
             long distanceSquaredToRefPoint1 = xDistanceToRefPoint1 * xDistanceToRefPoint1 + yDistanceToRefPoint1 * yDistanceToRefPoint1;
             long distanceSquaredToRefPoint2 = xDistanceToRefPoint2 * xDistanceToRefPoint2 + yDistanceToRefPoint2 * yDistanceToRefPoint2;
             long distanceSquared = (distanceSquaredToRefPoint1 <= distanceSquaredToRefPoint2) ? distanceSquaredToRefPoint1 : distanceSquaredToRefPoint2;
-            long relativeValue = (distanceSquared << 20) + i; // Store distanceSquared in higher-order bits, and timestamp in lower-order bits
+            long relativeValue = (distanceSquared << 20) + i;
             sortMe[i] = relativeValue;
         }
         if (count < 500000) {
